@@ -1,0 +1,267 @@
+@import "http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic|Open+Sans:300italic,400italic,600italic,700italic,400,300,600,700";
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font: 300 1em/1.5em "Lato", "Open Sans", Helvetica, Arial, sans-serif;
+  background: #000000;
+  color: #FFFFFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font: 300 1.5em/1.5em "Lato", "Open Sans", Helvetica, Arial, sans-serif;
+  color: #f6909e;
+  font-weight: 600;
+}
+
+strong {
+  font-weight: 600;
+}
+
+p {
+  font-weight: 300;
+  padding-bottom: 10px;
+}
+
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.scene {
+  position: relative;
+  padding: 20px 0;
+}
+.scene article {
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.scene article:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media (min-width: 1200px) {
+  .scene {
+    padding: 40px 0;
+  }
+}
+@media (min-width: 960px) {
+  .scene article {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .scene article:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+body {
+  background: #FFFFFF;
+  height: 1000px;
+}
+
+.fixedButton {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  bottom: 10px;
+  right: 10px;
+  background: gray;
+}
+
+.navbar {
+  width: 100%;
+  background: #000000;
+}
+.navbar a {
+  outline: 0;
+  text-decoration: none;
+}
+.navbar .navbar-toggle {
+  height: 30px;
+  width: 30px;
+  margin: 0 auto;
+}
+.navbar:before, .navbar:after {
+  content: "";
+  display: table;
+}
+.navbar:after {
+  clear: both;
+}
+.navbar #menu-main {
+  display: none;
+}
+.navbar #menu-main li {
+  display: block;
+}
+.navbar #menu-main li a {
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  color: #CCCCCC;
+  padding: 1em 1em;
+  border-top: 1px solid #333333;
+  border-bottom: 3px solid transparent;
+}
+.navbar #menu-main li a:hover {
+  color: #FFFFFF;
+  border-bottom: 3px solid #EF314B;
+}
+.navbar .navbar-brand {
+  display: block;
+  line-height: 1;
+  font-weight: 400;
+  padding: 0.8em 0 0.8em;
+  text-align: center;
+}
+.navbar .navbar-brand:hover {
+  text-decoration: none;
+}
+.navbar .navbar-brand span {
+  font-size: 1.4em;
+}
+.navbar .navbar-brand .navbar-tagline {
+  font-size: 16px;
+  font-weight: 400;
+  color: #4d4d4d;
+  text-align: center;
+}
+.navbar .navbar-menu {
+  height: 100%;
+}
+.navbar .navbar-menu:before, .navbar .navbar-menu:after {
+  content: "";
+  display: table;
+}
+.navbar .navbar-menu:after {
+  clear: both;
+}
+
+.navbar-sticky {
+  position: fixed;
+  top: 0;
+  display: none;
+  width: 100%;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .navbar {
+    text-align: center;
+  }
+  .navbar .navbar-menu {
+    border-top: 1px solid #333333;
+  }
+  .navbar #menu-main {
+    display: block !important;
+  }
+  .navbar #menu-main li {
+    display: inline-block;
+  }
+  .navbar #menu-main li a {
+    padding: 1em 0em;
+    margin: 0 0.5em;
+    border-top: none;
+  }
+
+  .navbar-toggle {
+    display: none;
+  }
+
+  .navbar-brand {
+    display: inline-block;
+    padding: 0.8em 0 0.8em;
+  }
+  .navbar-brand .navbar-tagline {
+    text-align: right;
+  }
+}
+/* Medium devices (desktops, 992px and up) */
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .navbar {
+    transition: none;
+  }
+
+  .navbar-right {
+    float: right;
+  }
+
+  .navbar-header {
+    float: left;
+  }
+
+  .navbar {
+    padding: 0 2em;
+  }
+  .navbar .navbar-menu {
+    margin-top: 1.8em;
+    border-top: none;
+  }
+}
