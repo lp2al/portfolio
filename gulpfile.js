@@ -27,8 +27,10 @@ if (env==='development') {
 }
 
 jsSources = [
+  'components/scripts/jqloader.js',
   'components/scripts/script.js'
 ];
+
 sassSources = ['components/sass/style.scss'];
 htmlSources = [outputDir + '*.html'];
 
