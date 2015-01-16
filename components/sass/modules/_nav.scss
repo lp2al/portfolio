@@ -3,11 +3,6 @@
 			         Responsive Navigation 
 --------------------------------------------------------------*/
 
-body {
-    background:$red;
-    height:1000px;
-}
-
 .navbar-collapsed #header {
 	transform: translate(0px, 0px);
 }
@@ -25,31 +20,29 @@ body {
 		text-decoration: none;
 	}
 }
-	.navbar-brand {
+	.brand {
 		display:block;
         line-height:1;
         font-weight:$normal;
-        border:1px solid #333;
-
+        &:hover {
+			text-decoration:none;
+		}
         span { 
-        	font-size:1.4em; 
+        	font-size:1.6rem; 
         }
-
-		.navbar-tagline {
-			font-size:14px;
+		.brand-tagline {
+			font-size:1.4rem;
 			font-weight:$normal;
 			color:lighten($dark, 30%);
 			text-align:center;
 		}
-
-		&:hover {
-			text-decoration:none;
-		}
 	}
 	
 	.navbar-toggle {
-		height:56px;
-		background:#f1f1f1;
+		padding:18px;
+		background:$red;
+		color:$light;
+		font-size:1.8rem;
 	}
 
 	.navbar-menu {
@@ -106,9 +99,18 @@ body {
 	.navbar-menu {
 		float:none;
 		width:$wide;
+		height:auto;
+		position: static; 
 		margin:0 auto;
+
+		li {
+			display:inline-block;
+		}
 	}
 
+	.navbar-toggle {
+		display:none;
+	}
 }
 
 /* Medium devices (desktops, 992px and up) */

@@ -1,5 +1,9 @@
 // _base.scss
-// ==============
+
+html {
+	font-size:62.5%;
+}
+
 body {
   font: $mainFont;
   background: $backgroundColor;

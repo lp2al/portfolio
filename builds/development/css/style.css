@@ -61,6 +61,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font: 300 1em/1.5em "Lato", "Open Sans", Helvetica, Arial, sans-serif;
   background: #000000;
@@ -123,11 +127,6 @@ body {
 /*-------------------------------------------------------------
 			         Responsive Navigation 
 --------------------------------------------------------------*/
-body {
-  background: #EF314B;
-  height: 1000px;
-}
-
 .navbar-collapsed #header {
   transform: translate(0px, 0px);
 }
@@ -152,28 +151,29 @@ body {
   text-decoration: none;
 }
 
-.navbar-brand {
+.brand {
   display: block;
   line-height: 1;
   font-weight: 400;
-  border: 1px solid #333;
 }
-.navbar-brand span {
-  font-size: 1.4em;
+.brand:hover {
+  text-decoration: none;
 }
-.navbar-brand .navbar-tagline {
-  font-size: 14px;
+.brand span {
+  font-size: 1.6rem;
+}
+.brand .brand-tagline {
+  font-size: 1.4rem;
   font-weight: 400;
   color: #4d4d4d;
   text-align: center;
 }
-.navbar-brand:hover {
-  text-decoration: none;
-}
 
 .navbar-toggle {
-  height: 56px;
-  background: #f1f1f1;
+  padding: 18px;
+  background: #EF314B;
+  color: #FFFFFF;
+  font-size: 1.8rem;
 }
 
 .navbar-menu {
@@ -233,7 +233,16 @@ body {
   .navbar-menu {
     float: none;
     width: 1200px;
+    height: auto;
+    position: static;
     margin: 0 auto;
+  }
+  .navbar-menu li {
+    display: inline-block;
+  }
+
+  .navbar-toggle {
+    display: none;
   }
 }
 /* Medium devices (desktops, 992px and up) */
